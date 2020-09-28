@@ -1,0 +1,299 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #807d7d;
+}
+
+.container-fluid{
+  padding-left: 0;
+}
+
+hr{
+  width: 5%;
+  border-style: dotted;
+  border-top: 1px;
+  border-width: 8px;
+  border-color: #807d7d;
+}
+/* first section */
+#title {
+ background-image: url(../images/typing-code.jpg);
+ background-attachment: fixed;
+ background-size: cover;
+ padding: 7% 15% 0;
+}
+
+.header-title{
+  margin: 100px 0;
+  color: #fff;
+}
+
+.overlay{
+  background-color: black;
+}
+
+/* Headings */
+.big-heading{
+  font-size: 4.5rem;
+  font-weight: bolder;
+}
+
+.sub-heading{
+  margin-bottom: 40px;
+}
+
+.section-title{
+  font-size: 3rem;
+  margin-top: 80px;
+  letter-spacing: 2px;
+}
+
+/* nav bar */
+
+.navbar-nav{
+ margin: 100px auto 0;
+ position: relative;
+ top: 40px;
+}
+
+.nav-item{
+  background-color: #d6e0f0;
+  padding: 10px;
+}
+
+/* Profile Section */
+
+#profile{
+  padding: 2% 13% 5%;
+}
+
+.profile-heading{
+  font-size: 2.1rem;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.profile-para{
+  font-size: 1.3rem;
+  margin-top: 30px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.my-image{
+  width: 70%;
+  margin: 40px auto 0px;
+}
+
+.icon-text{
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+/* Education Section */
+
+#education{
+  background-color: #d6e0f0;
+  padding: 2% 13% 5%;
+}
+
+.edu-img{
+  width: 100%;
+}
+
+.educ-text{
+  text-align: left;
+  margin-top: 3.5%;
+}
+
+.educ-texts{
+  text-align: right;
+  margin-top: 3.5%;
+}
+
+.edu-row{
+  margin: 30px 0;
+}
+
+/* Work Experience */
+
+#work{
+  padding: 3% 13%;
+}
+
+.work-row{
+  margin-top: 6%;
+  text-align: left;
+}
+
+/* Skill Section */
+
+#skills{
+  background-color: #8d93ab;
+  color: #fff;
+  padding: 2% 13% 5%;
+}
+
+#skills hr{
+  border-color: #fff;
+}
+
+.skills-row{
+  margin-top: 5%;
+  text-align: left;
+}
+
+/* Project Section */
+
+#projects {
+  padding: 2% 0 5%;
+}
+
+#projectCarousel{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.portfolio-img{
+  margin: 0 auto;
+  width: 50%;
+}
+
+.logobiz {
+  padding: 5% 10%;
+}
+
+/* Responsive Screen */
+
+@media (max-width: 800px){
+
+  /* NavBar */
+  .nav-item{
+    font-size: .8rem;
+    padding: 5px;
+  }
+  /* Education Section */
+  .edu-img{
+    width: 40%;
+  }
+
+  .educ-text{
+    text-align: center;
+  }
+
+  .educ-texts{
+    text-align: center;
+   
+  }
+
+  /* Work Exp */
+
+  .work-row{
+    text-align: justify center;
+    border-left: 1px solid  #8d93ab;
+  }
+  
+  .work-row h4{
+    font-size: 1.3rem;
+  }
+
+  .work-row h5{
+    font-size: 1.1rem;
+  }
+
+  /* Skills Section */
+
+  .skill-mt{
+    margin-top: 5%;
+  }
+
+}
+
+@media (max-width: 414px){
+
+  /* NavBar */
+  .nav-item{
+    position: relative;
+    right: 30px;
+  }
+
+  #title {
+    padding: 1% 10% 0;
+   }
+
+  .header-title {
+    margin-top: 150px;
+    margin-bottom: 0;
+  }
+
+  /* Headings */
+  .big-heading {
+    font-size: 2.5rem;
+  }
+
+  .sub-heading{
+    font-size: 1rem;
+  }
+
+  .section-title{
+    font-size: 2rem;
+  }
+
+  .profile-heading{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .profile-para{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .nav-item{
+    font-size: .6rem;
+    padding: 5px;
+  }
+
+  /* Profile Section */
+  .icon-text{
+    font-size: .7rem;
+  }
+
+  /* Education Section */
+
+  .educ-text{
+    text-align: center;
+    font-size: .9rem;
+  }
+
+  .educ-text h3{
+    font-size: 1.3rem;
+  }
+
+  .educ-texts{
+    text-align: center;
+    font-size: .9rem;
+  }
+
+  .educ-texts h3{
+    font-size: 1.3rem;
+  }
+
+  /* Skills Section */
+
+  #skills{
+  padding: 3% 0;
+  margin: 0;
+  }
+
+  .fa-star{
+    font-size: .8rem;
+  }
+
+  .row{
+    margin-left: 0;
+  }
+
+}
+
+
