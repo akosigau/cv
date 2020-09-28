@@ -41,22 +41,22 @@
         </div>
 
         <!-- Nav Bar -->
-        <nav class="navbar navbar-expand navbar-light ">
+        <nav id="navibar" class="navbar navbar-expand navbar-light ">
             <ul class="navbar-nav ">
               <li class="nav-item">
-                <a class="nav-link" href="">Profile</a>
+                <a class="nav-link" href="#profile">Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Education</a>
+                <a class="nav-link" href="#education">Education</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Experience</a>
+                <a class="nav-link" href="#work">Experience</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Skills</a>
+                <a class="nav-link" href="#skills">Skills</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Projects</a>
+                <a class="nav-link" href="#projects">Projects</a>
               </li>
             </ul>
         </nav>
@@ -507,8 +507,9 @@
         </div>
 
         <!-- Projects second section -->
-
+        <h5 class="other-project">Other Projects<h5>
         <div class="logobiz row">
+          
           <div class="col-lg-6">
             <div class="row no-gutters">
               <div class="col-md-12">
@@ -536,12 +537,34 @@
               
             </div>
           </div>
-          
-          
 
         </div>
       </div>
     </section>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class=" fas fa-arrow-up fa-2x"></i></button>
+
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
