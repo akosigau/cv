@@ -26,7 +26,7 @@ function scrollFunction() {
     document.getElementById("navigbar").style.top = "0";
     document.getElementById("navibar").style.opacity = "0";
   } else {
-    document.getElementById("navigbar").style.top = "-60px";
+    document.getElementById("navigbar").style.top = "-80px";
     document.getElementById("navibar").style.opacity = "1";
   }
 }

@@ -23,8 +23,8 @@ background:#8d93ab;
 }
 .loader {
 display: inline-block;
-width: 30px;
-height: 30px;
+width: 60px;
+height: 40px;
 position: absolute;
 z-index:3;
 border: 4px solid #Fff;
@@ -38,6 +38,12 @@ display: inline-block;
 width: 100%;
 background-color: #fff;
 animation: loader-inner 2s infinite ease-in;
+}
+
+.jod{
+  vertical-align: center;
+  color: #8d93ab;
+  font-weight: 600;
 }
 
 @keyframes loader {
@@ -138,10 +144,14 @@ hr{
   background-color:  #d6e0f0;
   position: fixed;
   left: 33%;
-  top: -60px;
+  top: -80px;
   display: block;
   transition: top 0.3s;
   z-index: 100;
+  -webkit-box-shadow: 0px 6px 15px 3px rgba(0,0,0,0.52); 
+  box-shadow: 0px 6px 15px 3px rgba(0,0,0,0.52);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #navigbar a {
@@ -165,10 +175,13 @@ hr{
   color: black;
 }
 
+
 .navibar-nav {
  margin: 0 auto;
  position: relative;
  top: 40px;
+ -webkit-box-shadow: 0px 6px 15px 3px rgba(0,0,0,0.52); 
+  box-shadow: 0px 6px 15px 3px rgba(0,0,0,0.52);
 }
 
 .nav-item{
@@ -273,49 +286,148 @@ hr{
 }
 
 /* Project Section */
-
-#projects {
-  padding: 0 0 5%;
+img {
+  border: 0;
+  display: block; /* collapse top and bottom margins */
+  max-width: 100%;
 }
 
-#projectCarousel{
-  width: 80%;
+.container {
   margin: 0 auto;
+  max-width: 560px;
 }
 
-.portfolio-img{
-  margin: 0 auto;
-  width: 50%;
+.gallery {
+  padding: 1% 0% 5%;
+  text-align: center;
 }
 
-.logobiz {
-  padding: 5% 10%;
-}
 
-.other-project{
-  margin-top: 5%;
-}
-
-/* Button */
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  color:#fff;
-  cursor: pointer;
-  border-radius: 10%;
-  background-color: #7f87a8;
-  transition: .5s;
+.gallery-grid {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, -webkit-max-content);
+  grid-auto-rows: minmax(200px, max-content);
+  grid-auto-flow: dense;
+  gap: 10px;
+  margin-top: 40px;
   padding: 10px;
 }
 
-#myBtn:hover {
-  background-color: #555;
+.gallery-item img {
+  cursor: pointer;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item-text {
+  display: none;
+}
+
+ /* Lightbox */
+
+ .lightbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  z-index: 102;
+}
+
+/* .preload will be removed by JS code during DOMContentLoaded event. This is done to avoid lightbox transition appearing on page load. */
+.lightbox.preload {
+  transition: none !important;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox .lb-content {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em;
+  max-height: 90%;
+  max-width: 70%;
+  padding: 1rem;
+  position: relative;
+}
+
+.lightbox .lb-img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-bottom: 8px;
+  display: block;
+  width: 70%;
+  height: auto;
+}
+
+.lightbox .lb-caption {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  max-width: 50ch;
+  overflow-y: auto; /* may occur in smartphones */
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: justify;
+}
+
+.lightbox.open .lb-caption {
+  opacity: 1;
+}
+
+.lightbox .lb-url {
+  color: #005fa9;
+  text-decoration: underline;
+  text-underline-position: under;
+  padding-top: 8px;
+  padding-bottom: 14px;
+}
+
+.lightbox .close {
+  background-color: lightgray;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  position: absolute;
+  top: -0.4em;
+  right: -0.8em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Lightbox overlay */
+.lightbox .close::before {
+  background-color: rgba(0, 0, 0, 0.9);
+  content: "";
+  cursor: default;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 /* Responsive Screen */
@@ -506,4 +618,35 @@ hr{
 
 }
 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .lightbox .lb-caption {
+    font-size: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  .lightbox .lb-content {
+    flex-direction: row;
+  }
+
+  .lightbox .lb-img {
+    margin-bottom: 0;
+  }
+
+  .lightbox .lb-caption {
+    padding: 0 1.5em;
+  }
+  .lightbox .lb-url {
+    padding-top: 0;
+  }
+}
 
