@@ -1,4 +1,3 @@
-
 body,html {
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -143,7 +142,6 @@ hr{
 #navigbar {
   background-color:  #d6e0f0;
   position: fixed;
-  left: 33%;
   top: -80px;
   display: block;
   transition: top 0.3s;
@@ -484,7 +482,7 @@ img {
 
   #navigbar {
   
-    left: 5%;
+    left: 5% !important;
    
     }
   
@@ -607,7 +605,7 @@ img {
 
   #navigbar {
   
-    left: 21%;
+    left: 20% !important;
    
     }
   
@@ -665,6 +663,13 @@ img {
 
 /* Large devices (laptops/desktops, 1024px and up) */
 @media screen and (min-width: 1024px) {
+
+  #navigbar {
+  
+    left: 34% !important;
+   
+    }
+
   .container {
     max-width: 960px;
   }
@@ -683,4 +688,3 @@ img {
     padding-top: 0;
   }
 }
-
