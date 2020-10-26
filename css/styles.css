@@ -432,6 +432,18 @@ img {
 
 /* Responsive Screen */
 
+@media screen and (min-width: 1920px){
+
+  /* Navbar */
+
+  #navigbar {
+    
+    left: 36.6%;
+   
+  }
+ 
+}
+
 @media (max-width: 1416px){
 
   /* Navbar */
