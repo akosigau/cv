@@ -7,10 +7,9 @@ $(window).on('beforeunload', function(){
 $(window).on('load',function() {
 	$(".loader").delay(2000).fadeOut("slow");
   $("#overlayer").delay(2000).fadeOut("slow");
-  
+  $(window).scrollTop(0);
   setTimeout(function(){
     $('body').removeClass('stop-scrolling');
-    //....and whatever else you need to do
 }, 2000);
 })
 
@@ -23,16 +22,20 @@ function scrollFunction() {
 
     
   if (document.body.scrollTop > 536 || document.documentElement.scrollTop > 536) {
-    document.getElementById("navigbar").style.top = "0";
-    document.getElementById("navibar").style.opacity = "0";
+    document.querySelector("#navigbar").style.opacity = "1";
+    document.querySelector(".navbar").style.opacity = "0";
+   
   } else {
-    document.getElementById("navigbar").style.top = "-80px";
-    document.getElementById("navibar").style.opacity = "1";
+    document.querySelector("#navigbar").style.opacity = "0";
+    document.querySelector(".navbar").style.opacity = "1";
   }
 }
-
+// reset button
+goUp = () => {
+$(window).scrollTop(0);
+}
+// logs scroll
 $(window).scroll(example);
-
 function example() {
   var tempScrollTop = $(window).scrollTop();
   console.log("Scroll from Top: " + tempScrollTop.toString());
