@@ -28,7 +28,7 @@
   </head>
   <body class="stop-scrolling">
     <div id="overlayer"></div>
-    <span class="loader">
+    <span class="loader translate-middle-x">
       <span class="loader-inner"><p class="jod">J.O.D</p></span>
     </span>
     
@@ -46,6 +46,17 @@
           </div>
         </div>
 
+        <!---- Menu for mobile -->
+        <div id="navigmobile" class="position-fixed top-0 translate-middle-x">
+          <div class="topnav-centered">
+          <a href="#profile"><img src="./images/Mobile menu/user.svg"></a>
+          <a href="#education"><img src="./images/Mobile menu/graduation-hat.png"></a>
+          <a href="#work"><img src="./images/Mobile menu/briefcase.svg"></a>
+          <a href="#skills"><img src="./images/Mobile menu/book-open.svg"></a>
+          <a href="#projects"><img src="./images/Mobile menu/file-text.svg"></a>
+          </div>
+        </div>
+
         <div class="row">
           <div class="header-title col-lg-12">
             <h1 class="big-heading">I'm James</h1>
@@ -54,7 +65,7 @@
         </div>
 
         <!-- Nav Bar -->
-        <nav  class="navbar navbar-expand navbar-light top-0 start-50 translate-middle-x"">
+        <nav  class="navbar navbar-expand navbar-light top-0 start-50 translate-middle-x">
             <ul class="navibar-nav navbar-nav ">
               <li class="nav-item">
                 <a class="nav-link" href="#profile">Profile</a>
@@ -86,7 +97,7 @@
         <h2 class="section-title">Profile</h2>
         <h5 class="sub-heading">Be Better Everyday in Everyway</h5>
         <hr>
-        <div class="row">
+        <div class="row reveal">
           <div class="col-lg-4 col-md-12">
            <h3 class="profile-heading">About Me</h3>
            <p class="profile-para">
@@ -121,7 +132,7 @@
         <h2 class="section-title">Education</h2>
         <h5 class="sub-heading">Learning Never Stops.</h5>
         <hr>
-        <div class="edu-row row ">
+        <div class="edu-row row reveal revealLeft">
           <div class="col-lg-2">
           <img class="edu-img" src="images/graduate.png" alt="grad-img">
           </div>
@@ -131,7 +142,7 @@
         </div>
         </div>
 
-        <div class="edu-row row">
+        <div class="edu-row row revealRight">
           <div class="educ-texts col-lg-10 ">
             <h3>Informatics Filinvest Philippines</h3>
             <p>JULY 2013 - April 2015  ADVANCE DIPLOMA IN GAMING AND ANIMATION TECHNOLOGY</p>
@@ -152,7 +163,7 @@
         <h5 class="sub-heading">Attitude is my best Asset.</h5>
         <hr>
         
-        <div class="work-row row">
+        <div class="work-row row reveal">
           <div class="col-lg-5">
           <h4>PC Soft Limited</h3>  
           <h5>Auckland, New Zealand</h4>
@@ -164,7 +175,7 @@
           </div>
         </div>
         
-        <div class="work-row row">
+        <div class="work-row row reveal">
           <div class="col-lg-5">
           <h4>Genghis Khan Monggolian Grill</h3>  
           <h5>Auckland, New Zealand</h4>
@@ -176,7 +187,7 @@
           </div>
         </div>
 
-        <div class="work-row row">
+        <div class="work-row row reveal">
           <div class="col-lg-5">
           <h4>Pak'nSave Lincoln Rd.</h3>  
           <h5>Auckland, New Zealand</h4>
@@ -188,7 +199,7 @@
           </div>
         </div>
 
-        <div class="work-row row">
+        <div class="work-row row reveal">
           <div class="col-lg-5">
           <h4>Aclan Group of Companies</h3>  
           <h5>Manila, Philippines</h4>
@@ -200,7 +211,7 @@
           </div>
         </div>
 
-        <div class="work-row row">
+        <div class="work-row row reveal">
           <div class="col-lg-5">
           <h4>Informatics Filinvest Alabang</h3>  
           <h5>Manila, Philippines</h4>
@@ -212,7 +223,7 @@
           </div>
         </div>
 
-        <div class="work-row row">
+        <div class="work-row row reveal">
           <div class="col-lg-5">
           <h4>West Contact Services Inc. An Alorica Company</h3>  
           <h5>Manila, Philippines</h4>
@@ -224,7 +235,7 @@
           </div>
         </div>
 
-        <div class="work-row row">
+        <div class="work-row row reveal">
           <div class="col-lg-5">
           <h4>Teleperformance (formerly Aeigis People Support)</h3>  
           <h5>Manila, Philippines</h4>
@@ -246,7 +257,7 @@
         <hr>
         <!-- Development -->
       <div class="skills-row row">
-        <div class="skill-mt col-lg-6 col-md-12 col-sm-12">
+        <div class="skill-mt col-lg-6 col-md-12 col-sm-12 reveal">
          <h4 class="text-center">Development</h4>
          &nbsp;
           <div class="row">
@@ -285,6 +296,7 @@
              <p>Bootstrap</p> 
             </div>
             <div class="col-5 col-sm-3">
+              <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
@@ -373,7 +385,7 @@
           </div>
         </div>
         <!-- Other Skills --> 
-        <div class="skill-mt col-lg-6 col-md-12 col-sm-12">
+        <div class="skill-mt col-lg-6 col-md-12 col-sm-12 reveal">
           <h4 class="text-center">Aesthethics</h4>
           &nbsp;
            <div class="row">
@@ -526,7 +538,7 @@
         <h2 class="section-title">Projects</h2>
         <h5 class="sub-heading">Experience is Absolute</h5>
         <hr>
-        <div class="gallery-grid">
+        <div class="gallery-grid reveal">
           <div class="gallery-item">
             <img src="./images/portfolio/d.jpg" alt="MyLifeCappImg">
             <div class="gallery-item-text" data-url="https://mylifecapp.com/">

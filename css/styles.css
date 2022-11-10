@@ -161,11 +161,27 @@ hr {
   font-size: 17px;
 }
 
-#navigbar a:hover {
-  background-color: #bec7d4;
-  color: black;
-  transition: 0.5s;
+#navigmobile {
+  background-color: #d6e0f0;
+  transition: top 0.3s;
+  -webkit-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.52);
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.52);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  z-index: 1;
+  left: 5%;;
 }
+
+#navigmobile a{
+  display: block;
+  color: #807d7d;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 
 #navbar a:hover {
   background-color: #ddd;
@@ -335,7 +351,7 @@ img {
   z-index: 102;
 }
 
-/* .preload will be removed by JS code during DOMContentLoaded event. This is done to avoid lightbox transition appearing on page load. */
+/* .preload will be removed by JS code during DOMContentLoaded event. */
 .lightbox.preload {
   transition: none !important;
 }
@@ -431,9 +447,7 @@ img {
 /* Responsive Screen */
 
 @media only screen and (max-width: 740px) and (min-width: 360px) {
-  .loader {
-    right: 42%;
-  }
+  
 
   /* NavBar */
 
@@ -442,7 +456,9 @@ img {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.52);
   }
 
- 
+  .navbar{
+    width: 100%;
+  }
 
   #navigbar a {
     padding: 12px;
@@ -454,6 +470,8 @@ img {
     position: relative;
    
   }
+
+  
 
   #title {
     padding: 1% 10% 0;
@@ -547,9 +565,6 @@ img {
     font-size: 1rem;
   }
 
-  .loader {
-    right: 50%;
-  }
 
   .edu-img {
     margin: 0 auto;
@@ -559,7 +574,7 @@ img {
 
 
   #navigbar a {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .nav-item {
@@ -611,6 +626,7 @@ img {
 /* Large devices (laptops/desktops, 1024px and up) */
 @media screen and (min-width: 1440px) {
   
+ 
 
   .container {
     max-width: 960px;
@@ -631,5 +647,38 @@ img {
   }
 }
 
+/* Small devices (mobile phones , 375px and below) */
+@media screen and (max-width: 375px) {
+  
+  .navbar {
+    left: 43% !important;
+}
+ 
+}
 
+/* medium devices (mobile phones , 375px and below) */
+@media screen and (min-width: 768px) and (max-width: 1280px){
+  
+  #navigbar a {
+    
+    font-size: 10px;
+  }
 
+  .edu-img {
+    width: 15vh;
+}
+
+}
+/* slide fade contents
+/* reveal from bottom */
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
