@@ -7,16 +7,12 @@ $(window).on('beforeunload', function(){
 $(window).on('load',function() {
 	$(".loader").delay(2000).fadeOut("slow");
   $("#overlayer").delay(2000).fadeOut("slow");
-  $(window).scrollTop(0);
+  $(window).scrollTop(0); //resets position upon load
   setTimeout(function(){
     $('body').removeClass('stop-scrolling');
 }, 2000);
 })
 
-// reset button
-goUp = () => {
-$(window).scrollTop(0);
-}
 
 // logs scroll
 $(window).scroll(example);
@@ -30,10 +26,8 @@ mobileFunction = (mobile) => {
   if (mobile.matches) { // if media screen matches
    // When the user scrolls down 
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
 
-    
   if (document.body.scrollTop > 395 || document.documentElement.scrollTop > 395) {
     document.querySelector("#navigmobile").style.opacity = "1";
     document.querySelector("#navigmobile").style.top = "-50px";
@@ -45,6 +39,8 @@ function scrollFunction() {
     document.querySelector(".navbar").style.opacity = "1";
   }
 }
+
+
   } else {  // if screen does not match
     window.onscroll = function() {scrollFunction()};
 
@@ -67,7 +63,6 @@ mobileFunction(mobile);
 mobile.addListener(mobileFunction);
 
 // content fades in on scroll 
-
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -86,3 +81,7 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
+// reset button
+goUp = () => {
+  $(window).scrollTop(0);
+  }
